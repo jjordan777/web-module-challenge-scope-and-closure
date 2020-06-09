@@ -83,29 +83,24 @@ finalScore(inning, 9) might return:
 // I set the parameters with callback function:(inning, numInnings)
 // cb parameter
 
-
 function finalScore(cb, numInnings) {
-  let home = 0
-  let away = 0
+  let home = 0;
+  let away = 0;
 
- for (let i = 0; i < numInnings; i++){
-  //  home = cb() + home
+  for (let i = 0; i < numInnings; i++) {
+    //  home = cb() + home
     home += cb();
     away += cb();
   }
-    let score = {
-      "Home": home,
-      "Away": away,
-    };
-    return score;
-    }
-    console.log(finalScore(inning, 7));
+  let score = {
+    Home: home,
+    Away: away,
+  };
+  return score;
+}
+console.log(finalScore(inning, 7));
 
-
-  
-
-
-  /*Code Here*/
+/*Code Here*/
 
 /* Task 4: 
 
@@ -128,6 +123,16 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(cb, numInnings) {
+  let teamScore = {
+    home: 0,
+    away: 0,
+  };
+  for(let i = 0; i < numInnings; i++){
+  //   return `${inningNumber}inning: 0 - 2`
+  // }
+  console.log(`${i + 1} inning: ${teamScore.home += cb()} - ${teamScore.away += cb()}`);
+  }
+  return 
 }
+scoreboard(inning, 9);
